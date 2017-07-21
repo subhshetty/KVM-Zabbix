@@ -1,0 +1,12 @@
+UserParameter=custom.kvm.pool.discover,sudo /usr/local/bin/zabbix-kvm-res.py --resource pool --action list
+UserParameter=custom.kvm.pool.size[*],sudo /usr/local/bin/zabbix-kvm-res.py --resource pool --action $1 --pool $2
+UserParameter=custom.kvm.pool.active[*],sudo /usr/local/bin/zabbix-kvm-res.py --resource pool --action active --pool $1
+UserParameter=custom.kvm.pool.uuid[*],sudo /usr/local/bin/zabbix-kvm-res.py --resource pool --action UUID --pool $1
+UserParameter=custom.kvm.net.discover,sudo /usr/local/bin/zabbix-kvm-res.py --resource net --action list
+UserParameter=custom.kvm.net.active[*],sudo /usr/local/bin/zabbix-kvm-res.py --resource net --action active --net $1
+UserParameter=custom.kvm.net.uuid[*],sudo /usr/local/bin/zabbix-kvm-res.py --resource net --action UUID --net $1
+UserParameter=custom.kvm.domain.discover,sudo /usr/local/bin/zabbix-kvm-res.py --resource domain --action list
+UserParameter=custom.kvm.domain.active[*],sudo /usr/local/bin/zabbix-kvm-res.py --resource domain --action active --domain $1
+UserParameter=custom.kvm.domain.uuid[*],sudo /usr/local/bin/zabbix-kvm-res.py --resource domain --action UUID --domain $1
+
+https://github.com/bushvin/zabbix-kvm-res - link for git project
